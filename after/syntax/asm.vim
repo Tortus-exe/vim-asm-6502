@@ -25,18 +25,18 @@ syn match Macro '\vMACRO|ENDM|macro|endm'
 syn match Repeat '\v(REPT\s\d*|ENDR|rept\s\d*|endr)'
 syn match File '\v[/A-Za-z0-9\\_-]+\.asm'
 
-hi Instruction_A ctermfg=14
-hi Instruction_Y ctermfg=40
-hi Instruction_X ctermfg=219
-hi Instruction_BranchAndJump ctermfg=226
-hi Instruction_SetRegister ctermfg=141
-hi Instruction_Memory ctermfg=105
-hi Instruction_Stack ctermfg=125
-hi Instruction_NOP ctermfg=196
-hi ASM_Hexadecimal ctermfg=172
-hi ASM_Binary ctermfg=196
-hi Offset ctermfg=33
-hi Label ctermfg=1
-hi Macro ctermfg=16 ctermbg=71
-hi Repeat ctermfg=16 ctermbg=68
-hi File ctermfg=145
+hi Instruction_A ctermfg=14 guifg=#00ffff
+hi Instruction_Y ctermfg=40 guifg=#00d700
+hi Instruction_X ctermfg=219 guifg=#ffafff
+hi Instruction_BranchAndJump ctermfg=226 guifg=#ffff00
+hi Instruction_SetRegister ctermfg=141 guifg=#af87ff
+hi Instruction_Memory ctermfg=105 guifg=#8787ff
+hi Instruction_Stack ctermfg=125 guifg=#5f001f
+hi Instruction_NOP ctermfg=196 guifg=#ff0000
+hi ASM_Hexadecimal ctermfg=172 guifg=#d78700
+hi ASM_Binary ctermfg=196 guifg=#ff0000
+hi Offset ctermfg=33 guifg=#0087ff
+hi Label ctermfg=1 guifg=#800000
+hi Macro ctermfg=16 ctermbg=71 guifg=#00a040
+hi Repeat ctermfg=16 ctermbg=68 guifg=#5f87d7
+hi File ctermfg=145 guifg=#afafaf
