@@ -1,6 +1,8 @@
 hi Normal ctermfg=7
 hi link asmIdentifier Normal
 
+syn clear asmComment
+
 syn match Comment ';.*$'
 syn match Instruction_A '\v(LDA|STA|CMP|TXA|TYA|AND|EOR|ORA|ADC|SBC|ROR|ROL|LSR|ASL|BIT|lda|sta|cmp|txa|tya|and|eor|ora|adc|sbc|ror|rol|lsr|asl|bit)>'
 syn match Instruction_BranchAndJump '\v(JSR|RTS|BNE|BEQ|BCC|BCS|BVC|BVS|JMP|BPL|BMI|RTI|jsr|rts|bne|beq|bcc|bcs|bvc|bvs|jmp|bpl|bmi|rti)>'
@@ -18,7 +20,7 @@ syn match ASM_Hexadecimal 'HEX|hex.*$'
 syn match ASM_Binary '\v#?\%\d+'
 syn match Offset '\v, ?(x|y|X|Y)'
 syn match Offset '(.*)'
-syn match Offset '\v\.?DB|db|DL|dl|DH|dh|DW|dw|DSB|dsb'
+syn match Offset '\v\(#[<>$%]+\)?\.?DB|db|DL|dl|DH|dh|DW|dw|DSB|dsb|bank|BYTE|byte'
 syn match Label '\v^(\+|-|\@)\S*\s?'
 syn match Label '\v^\w:'
 syn match Macro '\vMACRO|ENDM|macro|endm'
@@ -35,6 +37,7 @@ hi Instruction_Stack ctermfg=125 guifg=#5f001f
 hi Instruction_NOP ctermfg=196 guifg=#ff0000
 hi ASM_Hexadecimal ctermfg=172 guifg=#d78700
 hi ASM_Binary ctermfg=196 guifg=#ff0000
+" hi AsmComment ctermfg=33 guifg=#0087ff
 hi Offset ctermfg=33 guifg=#0087ff
 hi Label ctermfg=1 guifg=#800000
 hi Macro ctermfg=16 ctermbg=71 guifg=#00a040
